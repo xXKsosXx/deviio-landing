@@ -149,6 +149,30 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Post-it e-facture */}
+      <div
+        className="absolute bottom-8 right-8 rotate-2 bg-yellow-300 shadow-xl rounded-sm p-4 w-44 hidden lg:block"
+        style={{
+          boxShadow: "4px 4px 0px rgba(0,0,0,0.15)",
+          fontFamily: "var(--font-cabinet)",
+        }}
+      >
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-green-600 font-black text-lg">&#10003;</span>
+          <span className="font-black text-sm text-gray-900 uppercase tracking-tight">
+            Prêt pour
+          </span>
+        </div>
+        <p className="font-black text-gray-900 text-lg leading-tight">
+          E-facture
+          <br />
+          2026
+        </p>
+        <p className="text-xs text-gray-600 mt-2 leading-snug">
+          Obligatoire pour toutes les entreprises françaises
+        </p>
+      </div>
     </section>
   );
 }
