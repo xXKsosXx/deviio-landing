@@ -29,6 +29,21 @@ export const metadata: Metadata = {
     siteName: "Deviio",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "https://deviio.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Deviio — Application de devis et factures pour artisans",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Deviio — Devis & Factures pour artisans",
+    description:
+      "Créez vos devis et factures en 2 minutes depuis votre téléphone. Conforme e-facture 2026.",
+    images: ["https://deviio.app/og-image.png"],
   },
   alternates: {
     canonical: "https://deviio.app",
