@@ -6,7 +6,7 @@ const features = [
       </svg>
     ),
     title: "Envoi PDF instantané",
-    desc: "Envoyez vos devis et factures en PDF par email ou WhatsApp en un tap.",
+    desc: "Votre client reçoit le PDF directement dans sa boîte mail, avec le nom de votre entreprise comme expéditeur. En un seul tap.",
   },
   {
     icon: (
