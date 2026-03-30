@@ -1,12 +1,11 @@
 import Image from "next/image";
-
-const BASE_URL = "https://deviio-webhook.vercel.app/api";
+import Link from "next/link";
 
 const legal = [
-  { label: "Politique de confidentialité", href: `${BASE_URL}/privacy` },
-  { label: "Mentions légales", href: `${BASE_URL}/mentions-legales` },
-  { label: "CGU", href: `${BASE_URL}/cgu` },
-  { label: "Supprimer mon compte", href: `${BASE_URL}/delete-account` },
+  { label: "Politique de confidentialité", href: "/privacy" },
+  { label: "Mentions légales", href: "/mentions-legales" },
+  { label: "CGU", href: "/cgu" },
+  { label: "Supprimer mon compte", href: "https://deviio-webhook.vercel.app/api/delete-account", external: true },
 ];
 
 export default function Footer() {
@@ -40,14 +39,23 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {legal.map((l) => (
                 <li key={l.label}>
-                  <a
-                    href={l.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-white/50 hover:text-white transition-colors"
-                  >
-                    {l.label}
-                  </a>
+                  {"external" in l && l.external ? (
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-white/50 hover:text-white transition-colors"
+                    >
+                      {l.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={l.href}
+                      className="text-sm text-white/50 hover:text-white transition-colors"
+                    >
+                      {l.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
